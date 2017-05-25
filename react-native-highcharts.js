@@ -15,6 +15,8 @@ class ChartWeb extends Component {
     return `<html>
         <head>
           <style media="screen" type="text/css">#container{width:100%;height:100%;top:0;left:0;right:0;bottom:0;position:absolute;}</style>
+            <script>${Highcharts}</script>
+            <script>${Exporting}</script>
             <script>
               document.addEventListener("DOMContentLoaded", function() {
                 ${this.props.options ? 'Highcharts.setOptions(' + options + ')' : null}
