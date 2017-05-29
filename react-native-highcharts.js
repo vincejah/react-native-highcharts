@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import { AppRegistry, StyleSheet, Text, View, WebView, Image, Dimensions } from 'react-native'
-import { Highcharts, Exporting, MomentJs, MomentJsTimezone } from './scripts'
+import { Highcharts, HighchartsExporting, HighchartsMore, MomentJs, MomentJsTimezone } from './scripts'
 const { height, width } = Dimensions.get('window')
 
 class ChartWeb extends Component {
@@ -16,7 +16,8 @@ class ChartWeb extends Component {
         <head>
           <style media="screen" type="text/css">#container{width:100%;height:100%;top:0;left:0;right:0;bottom:0;position:absolute;}</style>
             <script>${Highcharts}</script>
-            <script>${Exporting}</script>
+            <script>${HighchartsExporting}</script>
+            <script>${HighchartsMore}</script>
             <script>${MomentJs}</script>
             <script>${MomentJsTimezone}</script>
             <script>
