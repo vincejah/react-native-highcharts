@@ -1,6 +1,6 @@
-import React, { Component, PropTypes } from 'react'
-import { AppRegistry, StyleSheet, Text, View, WebView, Image, Dimensions } from 'react-native'
-import { Highcharts, HighchartsExporting, HighchartsMore, MomentJs, MomentJsTimezone } from './scripts'
+import React, { Component } from 'react'
+import { StyleSheet, View, WebView, Dimensions } from 'react-native'
+import { Highcharts, HighchartsMore, MomentJs, MomentJsTimezone } from './scripts'
 const { height, width } = Dimensions.get('window')
 
 class ChartWeb extends Component {
@@ -77,7 +77,7 @@ var flattenObject = function (obj, str = '{') {
 
 var flattenText = function (item) {
   var str = ''
-  if (item && typeof item === 'object' && item.length == undefined) {
+  if (item && typeof item === 'object' && item.length === undefined) {
     str += flattenObject(item)
   } else if (item && typeof item === 'object' && item.length !== undefined) {
     str += '['
@@ -89,7 +89,7 @@ var flattenText = function (item) {
   } else if (typeof item === 'string' && item.slice(0, 8) === 'function') {
     str += `${item}`
   } else if (typeof item === 'string') {
-    str += `\"${item.replace(/"/g, '\\"')}\"`
+    str += `"${item.replace(/"/g, '\\"')}"`
   } else {
     str += `${item}`
   }
